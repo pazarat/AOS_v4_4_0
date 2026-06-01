@@ -1,0 +1,7 @@
+{
+  "project_id": "sample-active-project",
+  "status": "draft",
+  "source": "AOS v2 package sample",
+  "purpose": "Provide a tiny payload so the File Intelligence Matrix can be tested immediately.",
+  "truth_status": "seed"
+}

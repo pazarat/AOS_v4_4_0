@@ -1,0 +1,320 @@
+# PAZARAT PRD AND CODE RUNTIME GATES
+# Purpose: active command board for Pazarat documentation, routing, shared components, and implementation translation.
+
+version: 5
+principle: "Pazarat PRDs must be woven from programmatic understanding, hierarchy-safe, relationship-aware, database/API-conscious, maintenance-ready, and translatable to ASP.NET/PostgreSQL/Next.js without invention."
+
+command_board_scope:
+  mandatory_when_triggered: true
+  not_exhaustive: true
+  rule: "These gates are the operating board for common Pazarat PRD/code work. They do not replace the Pazarat numbered tunnel or artifact truth."
+  no_missing_gate_excuse: "If a Pazarat numbered standard, taxonomy, PRD, relationship map, or accepted decision applies but no gate names the exact situation, apply that source anyway."
+  local_upgrade_policy: "If a missing or weak gate repeatedly causes drift, duplication, bad routing, or code-translation gaps, update this board or the owning numbered standard."
+
+
+entry_flow:
+  - classify_artifact_depth
+  - apply_360_degree_gate_when_relevant
+  - apply_pazarat_reality_calibration_gate_when_raw_or_cross_module_logic_appears
+  - apply_central_reference_gate_when_shared_terms_appear
+  - apply_depth_gate
+  - apply_relationship_gates
+  - apply_translation_gate_when_relevant
+  - apply_data_model_api_gate_when_entities_relationships_filters_or_endpoints_are_implied
+  - apply_engineering_environment_gate_when_code_or_environment_is_involved
+  - apply_incomplete_truth_gate_when_reference_is_binding_but_weak_or_execution_depends_on_a_thin_standard
+  - apply_code_practice_canon_gate_when_code_api_database_realtime_tests_or_migrations_are_involved
+  - apply_codebase_integration_gate_when_repository_structure_or_docs_code_routing_is_involved
+  - apply_maintenance_gate_before_delivery
+
+artifact_depths:
+  parent_prd: "Section heart, map, boundaries, child routing, parent relationships. No child-detail bloat."
+  child_prd: "Local workflow and business logic deep enough for design/code extraction."
+  sub_child_prd: "Complex internal workflow or reusable UI/data behavior owned by a child."
+  shared_component: "Reusable UI/backend/data behavior consumed by multiple sections."
+  implementation_contract: "API/database/frontend/backend/test handoff derived from accepted PRDs."
+  data_api_contract: "Entity, relationship, database, command/query, endpoint, DTO, permission, and migration implications derived from mature scenarios."
+
+pazarat_gates:
+  pazarat_truth_gate:
+    trigger: "Any Pazarat PRD, route, module, dashboard, implementation, or relationship is referenced."
+    require:
+      - read Pazarat local numbered tunnel and relevant artifact owner
+      - apply relevant Pazarat standards even if this YAML board does not name the exact case
+      - use documented Pazarat truth before inference
+      - classify new logic as accepted, inferred, proposed, open, or conflict
+      - avoid changing route names or ownership without explicit decision or clear correction
+
+
+
+  360_degree_engineering_gate:
+    trigger: "Any Pazarat documentation, scenario maturation, parent/child PRD, implementation translation, code generation, database design, API design, frontend design, testing, tooling, environment setup, or platform-wide consistency decision is requested or implied."
+    require:
+      - apply 13_PAZARAT_360_DEGREE_ENGINEERING_METHOD.md as the governing method
+      - apply 15_PAZARAT_RAW_TO_PROGRAMMATIC_NARRATIVE_WEAVING_STANDARD.md when raw scenario understanding or scenario rewriting is involved
+      - apply 16_PAZARAT_DATA_MODEL_DATABASE_API_AND_ENDPOINT_STANDARD.md when entities, relationships, filters, persistence, commands, queries, endpoints, or OpenAPI contracts are implied
+      - ensure documentation standards, implementation translation, data/database/API contracts, engineering environment, and Pazarat platform objective rotate together
+      - do not treat documentation templates, code translation, or programming environment as independent tracks
+      - classify the artifact's active depth as parent, child, sub-child, workflow, screen, shared component, implementation contract, environment standard, or code output
+      - verify the output can move to the next 360 direction without unsupported invention
+      - if one direction is weak, classify the owning gap before generating final code or final PRD content
+
+
+  pazarat_reality_calibration_gate:
+    trigger: "Raw scenario, parent/child PRD, workflow, audit, repair, or implementation-facing explanation must be calibrated against the actual Pazarat platform structure and lifecycle."
+    require:
+      - apply 13_PAZARAT_360_DEGREE_ENGINEERING_METHOD.md section `Pazarat Reality Calibration Lens`
+      - apply 15_PAZARAT_RAW_TO_PROGRAMMATIC_NARRATIVE_WEAVING_STANDARD.md section `Project Reality Weave Requirement` when raw narrative is involved
+      - use Pazarat objective, dashboard/module structure, local standards, taxonomies, shared primitives, and lifecycle dependencies as inference anchors
+      - consider lifecycle-critical links to existing Pazarat modules such as users, stores, products, orders, payments, shipping, notifications, invoices, returns, reports, permissions, audit, and governance when the scenario naturally touches them
+      - include only links relevant to the current artifact depth; route child/sibling detail instead of bloating the current artifact
+      - classify added links as confirmed Pazarat truth, strong Pazarat inference, recommended lifecycle completion, open Pazarat decision, or conflict/risk
+      - avoid final policy invention when Pazarat files or user decisions have not confirmed the rule
+    refs:
+      - 13_PAZARAT_360_DEGREE_ENGINEERING_METHOD.md
+      - 15_PAZARAT_RAW_TO_PROGRAMMATIC_NARRATIVE_WEAVING_STANDARD.md
+      - ../../01_PROJECT_ORCHESTRATION/21_PROJECT_REALITY_CALIBRATION_AND_GOLDEN_SYNTHESIS_METHOD.md
+
+  central_reference_gate:
+    trigger: "A state, event, role, permission, verification rule, approval behavior, audit behavior, notification behavior, validation pack, UI pattern, table behavior, form behavior, backend pattern, endpoint style, database pattern, or reusable project term appears."
+    require:
+      - check the central owner before defining local terms
+      - use 02_PLATFORM_STATE_TAXONOMY.md for state families and state terms
+      - use 03_PLATFORM_EVENT_TAXONOMY.md for event families and event terms
+      - use 08_PAZARAT_SHARED_PRIMITIVES_AND_CONTINUITY_MEMORY.md for reusable roles, permissions, validation, audit, notification, UI/backend patterns, and repeated behavior
+      - use 14_PAZARAT_ENGINEERING_ENVIRONMENT_AND_STACK_STANDARD.md for stack, framework, repository, tooling, migration, testing, CI/CD, and deployment terms
+      - use 15_PAZARAT_RAW_TO_PROGRAMMATIC_NARRATIVE_WEAVING_STANDARD.md for raw-to-scenario maturity, programmatic backbone, and narrative weave terms
+      - use 16_PAZARAT_DATA_MODEL_DATABASE_API_AND_ENDPOINT_STANDARD.md for database, relationship, command/query, endpoint, migration, seed, and OpenAPI extraction terms
+      - classify any non-existing shared concept as existing central reference, local extension, proposed central candidate, conflict, or open decision
+      - do not allow different directions to invent different names for the same shared concept
+
+  raw_to_programmatic_narrative_gate:
+    trigger: "Raw user explanation, scattered feature idea, scenario rewriting, PRD maturation, or narrative correction is requested or implied."
+    require:
+      - apply 15_PAZARAT_RAW_TO_PROGRAMMATIC_NARRATIVE_WEAVING_STANDARD.md as a universal scenario method, not as a country-context-only rule
+      - treat raw input as evidence, not final order or final ownership
+      - extract programmatic backbone before prose: stable identities, relationship spine, configurable values, runtime facts, filters, policy matrices, commands, and queries
+      - compare single-context behavior with multi-context behavior when the raw idea involves countries, roles, stores, markets, policies, or variable settings
+      - produce a woven scenario where each paragraph carries one operational idea and naturally prepares the next
+      - reject sectioning-only maturity when the underlying programming/database/API interpretation is weak
+
+  data_model_api_contract_gate:
+    trigger: "A scenario, PRD, workflow, screen, dashboard, backend feature, database design, API design, endpoint extraction, form, table, filter, policy, template, or implementation contract implies stored data or exposed operations."
+    require:
+      - apply 16_PAZARAT_DATA_MODEL_DATABASE_API_AND_ENDPOINT_STANDARD.md
+      - identify stable identities, relationship spines, configurable values, runtime facts, lifecycle states, events, filters, and read models at the correct artifact depth
+      - separate relationship-derived filters from ownership claims
+      - separate configuration/templates from runtime transaction facts
+      - derive endpoints from actor intent, permissions, commands, queries, transitions, and side effects, not from page names alone
+      - classify endpoint families such as command, query, transition, configuration, relationship, bulk, report/export, or integration
+      - flag constraints, indexes, migrations, seeds, snapshots, versioning, audit, and OpenAPI implications when relevant
+      - rotate backward to repair the scenario if database or endpoint extraction exposes false ownership, false relationships, or unsafe behavior
+
+  engineering_environment_gate:
+    trigger: "Programming environment, framework choice, backend/frontend/database setup, repository structure, local development, testing tools, CI/CD, deployment, or code generation environment is requested or implied."
+    require:
+      - apply 14_PAZARAT_ENGINEERING_ENVIRONMENT_AND_STACK_STANDARD.md as binding project truth
+      - align backend with .NET / ASP.NET Core Web API / C# unless explicit ADR-level reconsideration is requested
+      - align database with PostgreSQL and EF Core migrations unless explicit ADR-level reconsideration is requested
+      - align frontend with Next.js App Router and TypeScript unless explicit ADR-level reconsideration is requested
+      - classify alternative stacks as alternatives, not Pazarat project truth
+      - prevent framework drift such as NestJS, Laravel, Django, FastAPI, Spring Boot, or other backend stacks unless the user explicitly asks for comparison or migration
+      - require tests, migrations, OpenAPI/API contract, and CI/CD implications when production-oriented code is generated
+
+  parent_child_360_depth_gate:
+    trigger: "Parent PRD, Child PRD, sub-child, workflow, screen artifact, or related template/standard is created, audited, or revised."
+    require:
+      - preserve the difference between parent and child documentation responsibilities
+      - parent PRDs define identity, boundaries, child routing, high-level relationships, parent-depth states/events, and implementation implications without child bloat
+      - child PRDs define detailed local workflow, fields, validation, permissions, state transitions, events, API/backend/database/frontend/test implications, and feedback candidates
+      - sub-child/workflow/screen artifacts handle complex local branches instead of overloading child prose
+      - ensure each depth still uses the same central state/event/primitive/environment references
+      - do not force one generic template when artifact depth requires different 360 responsibilities
+
+  parent_prd_gate:
+    trigger: "Creating, auditing, or revising a Pazarat Parent PRD."
+    require:
+      - artifact identity and hierarchy position
+      - section purpose, scope, and boundaries
+      - high-level narrative that explains the whole section without child-detail bloat
+      - parent routing ledger
+      - child map and recommended build order
+      - child-to-child dependency notes
+      - parent-to-parent relationship map
+      - external artifact routes for mentioned logic owned elsewhere
+      - shared component and primitive candidates
+      - state/event/entity index at parent depth
+      - design and implementation translation notes at parent depth
+      - open decisions and maintenance notes
+    if_child_detail_appears:
+      - keep only the seed needed to explain parent flow
+      - route detailed logic to child/sub-child candidate
+
+  parent_routing_ledger_gate:
+    trigger: "A parent PRD mentions children, sibling sections, external pages, shared components, prerequisites, or lifecycle dependencies."
+    require:
+      - classify each mention as local child, sub-child, prerequisite, external artifact, parent relation, shared primitive, shared component, state/event candidate, or open decision
+      - record owner and expected location when known
+      - do not create a file merely because something was mentioned
+      - update routing ledger when later understanding changes
+
+  child_prd_gate:
+    trigger: "Creating, auditing, or revising a Pazarat Child PRD."
+    require:
+      - parent inheritance and local scope
+      - detailed local scenario and workflow
+      - actor roles, permissions, visibility, and access rules
+      - fields, validation, lifecycle states, and edge cases where relevant
+      - state transitions and events emitted/consumed
+      - data/entity implications
+      - UI/UX behavior and screen/component implications
+      - API/backend translation notes
+      - database translation notes
+      - acceptance criteria and test implications
+      - parent update candidates and sibling/cross-system effects
+    if_logic_is_reusable_or_complex_inside_child:
+      - activate sub_child_gate
+
+  sub_child_gate:
+    trigger: "A child contains distinct reusable or complex internal logic: advanced filter, creation form, profile edit, table behavior, modal, workflow, validation pack, or reusable action area."
+    require:
+      - classify as sub-child, not sibling parent
+      - record owning child and local purpose
+      - define invariant behavior and variable fields
+      - record reuse candidates and consumers
+      - avoid duplicating shared UI/data patterns across sibling children
+
+  shared_component_gate:
+    trigger: "A table, filter, form, profile view, action menu, validation pattern, permission behavior, audit pattern, or backend operation repeats across modules."
+    require:
+      - classify as shared component, shared primitive, reusable pattern, or local duplicate
+      - record owner, consumers, invariant behavior, and configurable differences
+      - do not generate duplicate components unless local divergence is documented
+      - update consumers when shared behavior changes
+
+  parent_to_parent_relationship_gate:
+    trigger: "A Pazarat section interacts with another major section such as Auth, Store, Orders, Finance, Shipping, Roles, Notifications, Analytics, CRM, Marketing, or Operations."
+    require:
+      - record relationship purpose at parent depth
+      - separate relationship visibility from ownership of internal logic
+      - mark lifecycle dependency, data dependency, permission dependency, event dependency, or reporting dependency
+      - keep detailed logic in the owning parent/child
+
+  external_artifact_route_gate:
+    trigger: "A PRD mentions a page, module, workflow, or feature necessary to the journey but owned outside the current section."
+    require:
+      - record external owner and expected path when known
+      - explain why the external artifact matters to the current journey
+      - do not treat external artifact as local child
+      - create/update external artifact only when requested or required by the current task
+
+  code_translation_gate:
+    trigger: "Generating or preparing ASP.NET, PostgreSQL, Next.js, API, tests, or implementation scaffold from Pazarat documentation."
+    require:
+      - pass through 13_PAZARAT_360_DEGREE_ENGINEERING_METHOD.md before implementation
+      - pass through 14_PAZARAT_ENGINEERING_ENVIRONMENT_AND_STACK_STANDARD.md for stack and environment alignment
+      - enough documented business logic for implementation
+      - entities and table candidates
+      - commands and queries
+      - endpoint candidates or API contract needs
+      - DTO/input/output expectations
+      - permissions and security rules
+      - validation and error paths
+      - state transitions and emitted/consumed events
+      - audit/notification effects
+      - acceptance criteria and test cases
+    if_missing_required_logic:
+      - stop implementation or mark exact gap
+      - request/produce the missing PRD or implementation contract before coding
+
+  backend_database_gate:
+    trigger: "Pazarat backend/database design is requested or implied."
+    require:
+      - align with ASP.NET Core / .NET / C# and PostgreSQL direction
+      - apply 16_PAZARAT_DATA_MODEL_DATABASE_API_AND_ENDPOINT_STANDARD.md before proposing entities, tables, relationships, constraints, indexes, migrations, or seeds
+      - apply the engineering environment standard before choosing framework, ORM, migration, or test tools
+      - preserve business boundaries from PRDs
+      - derive entities/tables from accepted data implications and relationship spines
+      - do not invent domain tables from UI labels alone
+      - separate configurable values from runtime facts
+      - record migrations, constraints, indexes, snapshots/versioning, and audit needs when implementation depth requires them
+
+  frontend_translation_gate:
+    trigger: "Pazarat UI/UX or Next.js output is requested or implied."
+    require:
+      - derive screens/components from PRD narrative and routing ledger
+      - preserve shared components such as tables, filters, forms, profile views, and action menus
+      - distinguish presentation differences from business-logic differences
+      - do not create generic marketplace screens when PRD provides specific journey logic
+
+  hard_output_constraints:
+    trigger: "A Pazarat answer, patch, PRD update, report, or generated artifact has numeric, format, scope, file, language, citation, or no-unrelated-change constraints."
+    require:
+      - apply root HARD_CONSTRAINT_VALIDATION before delivery
+      - preserve requested file scope and project-local ownership boundaries
+      - do not claim diff/report/unchanged-surface compliance without checking
+      - if the constraint cannot be verified, produce a smaller conservative output or report the limitation
+
+  codebase_integration_and_docs_routing_gate:
+    trigger: "Pazarat repository structure, codebase integration, docs folder routing, backend/frontend/database folder placement, ZIP packaging, or repair of a failed integrated structure is requested or implied."
+    require:
+      - apply 17_PAZARAT_CODEBASE_INTEGRATION_AND_DOCUMENTATION_ROUTING_STANDARD.md
+      - apply 14_PAZARAT_ENGINEERING_ENVIRONMENT_AND_STACK_STANDARD.md for stack and repository strategy
+      - apply the general structural transformation gate before generating or packaging a repository
+      - distinguish root operating entry files, general tunnel layers, Pazarat local control plane, product documentation, backend code, frontend code, database artifacts, infra, scripts, and tests
+      - do not place the general Mind_Ai tunnel under ordinary `docs/` unless an explicit recorded decision says so
+      - do not create `.ai/` or helper maps as competing higher-priority entrypoints
+      - if A_dashboards, B_web_frontend, or C_mobile_app are moved to `docs/`, require a migration map and traceability update
+      - validate paths, routing, and ownership before delivery; folder existence alone is not sufficient
+
+  maintenance_gate:
+    trigger: "Changing a PRD section, workflow, child map, shared component, state, event, route, naming, or implementation implication."
+    require:
+      - check parent, child, sub-child, sibling, parent-to-parent, and external-route impact
+      - check whether a relevant local standard exists beyond the named gates
+      - update relationship maps and routing ledgers when links change
+      - preserve narrative clarity and avoid bloating parent PRDs
+      - report structural changes, moved sections, removed paragraphs, and unchanged surface
+
+  generation_stop_gate:
+    trigger: "The model is about to generate design, code, database, API, or child PRD from insufficient parent-level information."
+    require:
+      - identify missing child/sub-child or implementation contract
+      - produce a gap list or next artifact instead of inventing final logic
+      - classify proposed fill-ins separately from accepted project truth
+
+
+  incomplete_truth_gate:
+    trigger: "A referenced Pazarat file, standard, PRD, decision, scaffold, or implementation source exists but appears too thin, incomplete, inconsistent, or insufficient for the requested operation."
+    require:
+      - identify the owning reference file or decision
+      - compare the owner to higher Pazarat truth, platform objective, active 360 direction, and downstream execution needs
+      - classify the owner as accepted_truth, incomplete_truth, missing_truth, conflicting_truth, proposed_repair, or accepted_repair
+      - list missing maturity dimensions
+      - state the impact of executing without repair
+      - propose repair in the owner file or explicit decision log
+      - separate discovery from execution
+      - block production-oriented execution until owner repair is accepted or an explicit decision accepts the risk
+    forbid:
+      - bypassing an existing owner because it is thin
+      - blindly executing over a thin owner
+      - treating proposed repair as accepted truth
+      - using generic best practice as project truth without Pazarat-fit classification
+
+  code_practice_canon_gate:
+    trigger: "Pazarat backend, frontend, API, database, migration, realtime, worker, authorization, validation, error handling, observability, or tests are requested or implied."
+    require:
+      - apply 18_PAZARAT_CODE_PRACTICE_AND_IMPLEMENTATION_CANON.md
+      - apply 14_PAZARAT_ENGINEERING_ENVIRONMENT_AND_STACK_STANDARD.md for stack and environment
+      - apply 16_PAZARAT_DATA_MODEL_DATABASE_API_AND_ENDPOINT_STANDARD.md when persistence, entities, relationships, commands, queries, DTOs, endpoints, OpenAPI, or migrations are implied
+      - apply state and event taxonomies before naming states/events or emitting lifecycle events
+      - apply permissions/audit shared primitives before authorization or audit implementation
+      - classify any missing practice area as Code Practice Canon Incomplete Truth
+      - do not generate production-oriented code from stack names alone
+    forbid:
+      - api_from_page_name_only
+      - code_from_stack_name_only
+      - migration_without_migration_discipline
+      - realtime_without_reconnect_resync_and_outbox_strategy_when_business_correctness_depends_on_events
+      - authorization_by_role_name_or_ui_hiding_only
+      - tests_as_optional_future_work

@@ -1,0 +1,39 @@
+contract_id: operations_runtime_kernel_v4_1
+owner: operations_runtime
+version: 4.1.0
+status: authoritative_single_runtime_kernel
+purpose: >
+  Own the full operating graph, layer API invocation, contribution merging,
+  contradiction handling, truth synthesis, delivery rendering, and trace.
+
+entry_rule:
+  normal_entry: operations_runtime.main.OperationsKernel
+  legacy_cli: aos.py delegates to operations_runtime
+  duplicate_operation_sections: forbidden
+  direct_layer_entry: forbidden_for_normal_flow
+
+layer_api_rule:
+  each_major_layer_must_expose:
+    - LAYER_IDENTITY.md
+    - API file or main.py facade
+    - typed contribution shape
+  layer_output_for_delivery: LayerContribution
+  raw_reports_visible_by_default: false
+
+runtime_graph:
+  - load_operating_identity
+  - load_active_project_state
+  - capture_intent_hypothesis
+  - plan_layer_contributions
+  - invoke_layer_matrix
+  - ground_truth
+  - merge_contributions
+  - resolve_contradictions
+  - synthesize_operational_insight
+  - render_and_validate_delivery
+
+exit_condition:
+  required:
+    - operational_insight.summary
+    - operational_insight.first_step
+    - delivery.validation.passed

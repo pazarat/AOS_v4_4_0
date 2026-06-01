@@ -1,0 +1,36 @@
+project_contract:
+  project_id: pazarat
+  project_name: Pazarat
+  project_type: large_scale_multi_party_commerce_platform
+  source_migration: Mind_Ai_v7_10/02_MY_PROJECT/pazarat
+
+  mission: >
+    Pazarat is a platform-scale commerce operating ecosystem, not a simple storefront or generic marketplace.
+    It supports multi-party commercial operations, dashboards, web frontend, mobile app, workflows, governance,
+    lifecycle states, events, permissions, implementation translation, and cumulative PRD development.
+
+  agent_project_relationship:
+    agent_kernel: "00_AGENT_KERNEL is the execution mind."
+    project_truth: "This Pazarat folder is the project truth and memory plane."
+    cognitive_tunnel: "03_PROJECT_COGNITIVE_TUNNEL is the mandatory Pazarat-specific understanding gate."
+    artifacts: "04_PROJECT_ARTIFACTS contains product/module artifacts after the cognitive tunnel has been loaded."
+
+  truth_priority:
+    - 00_PROJECT_ENTRYPOINT.md
+    - 01_PROJECT_CONTRACT.yaml
+    - 02_PROJECT_TRUTH_INDEX.yaml
+    - 03_PROJECT_COGNITIVE_TUNNEL/_PROJECT_COGNITIVE_TUNNEL_GATE.yaml
+    - 03_PROJECT_COGNITIVE_TUNNEL/numbered_root_files
+    - 05_PROJECT_DECISIONS
+    - 04_PROJECT_ARTIFACTS
+    - 06_PROJECT_IMPLEMENTATION_TARGET
+    - confirmed_conversation_constraints
+
+  forbidden:
+    - treating_pazarat_as_generic_marketplace
+    - bypassing_project_cognitive_tunnel
+    - inventing_business_logic_not_grounded_in_project_truth
+    - undocumented_stack_drift
+    - jumping_to_code_without_prd_to_implementation_translation
+    - ignoring_state_event_taxonomy
+    - breaking_parent_child_artifact_hierarchy

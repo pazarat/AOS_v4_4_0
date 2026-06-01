@@ -1,0 +1,13 @@
+{
+  "system_id": "aos",
+  "system_version": "4.1.0-unified-operations-runtime-kernel",
+  "root_entrypoint": "AGENTS.md",
+  "identity_file": "aos_identity/OPERATIONAL_IDENTITY.md",
+  "silent_response_contract": "aos_identity/SILENT_RESPONSE_CONTRACT.md",
+  "system_truth_file": "aos_identity/system_truth.json",
+  "workshop_manifest": "workshop/_workshop_system/00_WORKSHOP_MANIFEST.md",
+  "identity_digest": "93d3a6d1e6103684e30db1a6f6f3426ab19d69113545317934b3e6d7889dad19",
+  "status": "unchanged",
+  "awareness_packet": "reports/operational_awareness_packet.json",
+  "meaning": "Any model entering AOS must load identity, constitution, workshop role, and active-project boundaries before high-impact work."
+}

@@ -1,0 +1,10 @@
+id: evaluation_harness
+version: '2.2'
+purpose: Decide whether a plan or operation satisfies intent, truth, policy, and acceptance gates before it is called done.
+prevents:
+  - done_without_evaluation
+  - high_confidence_without_receipt
+outputs:
+  - evaluation_result
+  - failed_gates
+  - receipt

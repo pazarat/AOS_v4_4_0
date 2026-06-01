@@ -1,0 +1,10 @@
+id: state_event_runtime
+version: '2.2'
+purpose: Keep deterministic lifecycle state and append-only event history for auditable operation.
+prevents:
+  - action_outside_lifecycle
+  - silent_mutation
+outputs:
+  - state_transition
+  - event_log
+  - checkpoint_reference

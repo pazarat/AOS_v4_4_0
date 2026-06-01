@@ -1,0 +1,80 @@
+project_cognitive_tunnel_runtime:
+  project_id: pazarat
+  purpose: convert_pazarat_reference_files_into_an_internal_project_cognition_state_before_artifact_work
+
+  cognition_state_schema:
+    project_identity_binding:
+      must_capture:
+        - pazarat_is_large_multi_party_commerce_operating_platform
+        - not_simple_store
+        - not_generic_marketplace
+    domain_boundaries:
+      must_capture:
+        - b2c
+        - b2b
+        - sellers
+        - stores
+        - dashboards
+        - orders
+        - shipping
+        - wallets
+        - governance
+        - permissions
+    system_language:
+      must_capture:
+        - states
+        - events
+        - actors
+        - permissions
+        - artifacts
+        - implementation_implications
+    implementation_constraints:
+      must_capture:
+        - dotnet_aspnet_core_web_api
+        - modular_monolith
+        - ddd_boundaries
+        - vertical_slices
+        - postgresql
+        - ef_core
+        - nextjs_app_router_typescript
+
+  profile_selection:
+    light_identity:
+      for:
+        - role_answers
+        - high_level_project_questions
+      required_outputs:
+        - project_identity_binding
+        - public_project_value_summary
+    focused_artifact:
+      for:
+        - prd_review
+        - screen_or_dashboard_work
+        - targeted_gap_analysis
+      required_outputs:
+        - artifact_owner
+        - relevant_standards
+        - states_events_permissions_slice
+        - traceability_requirements
+    deep_translation:
+      for:
+        - implementation_translation
+        - codebase_preparation
+        - architecture_redesign
+      required_outputs:
+        - full_project_cognition_state
+        - data_api_implications
+        - implementation_constraints
+        - validation_and_acceptance_implications
+
+  public_answer_boundary:
+    answer_from_project_cognition_not_file_recitation: true
+    cite_or_name_tunnel_files_only_when_user_requests_traceability_or_audit: true
+
+  hard_blocks:
+    - condition: pazarat_called_simple_store_or_generic_marketplace
+      action: reject_and_rebind_to_platform_identity
+    - condition: code_or_api_generated_without_states_events_permissions_data_implications
+      action: block_and_complete_translation_frame
+    - condition: artifact_review_without_owner_and_parent_child_context
+      action: load_hierarchy_and_traceability_context

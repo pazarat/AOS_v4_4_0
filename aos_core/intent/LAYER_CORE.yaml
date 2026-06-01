@@ -1,0 +1,13 @@
+id: intent
+version: '2.2'
+purpose: Classify user intent, operational surface, scope, risk, and truth depth before any goal or file operation.
+prevents:
+  - general_model_identity_as_project_answer
+  - wrong_surface_selection
+  - blind_execution
+outputs:
+  - intent_frame
+  - surface_resolution
+  - entrypoint
+  - risk_level
+adapter: intent_engine.py

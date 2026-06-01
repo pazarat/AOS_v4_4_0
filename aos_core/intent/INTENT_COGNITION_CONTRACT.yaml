@@ -1,0 +1,23 @@
+intent_cognition_contract:
+  version: 1.0
+  layer_type: core_cognition
+  position_in_spine:
+    after: operating_identity
+    before:
+      - surface_awareness
+      - truth_requirement
+      - artifact_cockpit
+      - goal_runtime
+  non_negotiables:
+    - Intent capture does not equal final decision.
+    - The user's request may express goal, suspected cause, metaphor, symptom, or constraint.
+    - User diagnosis must be tested against truth before repair or execution.
+    - Metaphors and analogies must be converted into operational standards before implementation.
+    - The layer must produce one cognition packet for the single spine, not multiple tunnels.
+    - It must not contain project-specific names or payload examples as runtime law.
+  outputs:
+    - Intent Cognition Packet
+    - layer_needs
+    - truth_grounding_requirement
+    - forbidden_motion
+    - next_runtime_step

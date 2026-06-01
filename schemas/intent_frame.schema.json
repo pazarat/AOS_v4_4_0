@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "IntentFrame",
+  "type": "object",
+  "required": [
+    "id",
+    "raw_request",
+    "intent_type",
+    "target",
+    "surface",
+    "entrypoint",
+    "risk_level",
+    "explicit_aos_intent"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "raw_request": {
+      "type": "string"
+    },
+    "intent_type": {
+      "type": "string"
+    },
+    "target": {
+      "type": "string"
+    },
+    "surface": {
+      "type": "string",
+      "enum": [
+        "active_project_payload",
+        "aos_environment"
+      ]
+    },
+    "entrypoint": {
+      "type": "string"
+    },
+    "risk_level": {
+      "type": "string"
+    },
+    "explicit_aos_intent": {
+      "type": "boolean"
+    },
+    "requires_file_access": {
+      "type": "boolean"
+    },
+    "may_modify_files": {
+      "type": "boolean"
+    },
+    "ambiguity_level": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "truth_requirements": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "must_not_do": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "identity_behavior": {
+      "type": "string"
+    },
+    "visible_scope": {
+      "type": "string"
+    },
+    "user_facing_subject": {
+      "type": "string"
+    },
+    "hidden_scopes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "response_mode": {
+      "type": "string"
+    },
+    "response_contract": {
+      "type": "object"
+    }
+  }
+}

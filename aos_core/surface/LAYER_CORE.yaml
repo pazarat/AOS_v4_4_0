@@ -1,0 +1,22 @@
+layer: surface_resolver
+version: 2.4
+role: >
+  Core spine layer that separates internal operating environment from the
+  user-facing response subject. It decides what may be visible in the answer.
+authority:
+  owns:
+    - visible_scope
+    - user_facing_subject
+    - hidden_scopes
+    - response_contract
+  does_not_own:
+    - project truth
+    - goal selection
+    - policy authorization
+    - file indexing
+mandatory_laws:
+  - AOS is silent infrastructure for project work.
+  - Active project payload is the default user-facing subject.
+  - AOS internals become visible only with explicit AOS/environment intent.
+  - Internal evidence may inform an answer without being exposed as the subject.
+  - Never describe AOS itself as the user's project unless the user explicitly asks about AOS.

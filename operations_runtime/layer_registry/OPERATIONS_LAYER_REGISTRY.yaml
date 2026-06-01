@@ -1,0 +1,60 @@
+registry_id: operations_runtime_layer_registry_v42
+owner: operations_runtime
+status: authoritative_runtime_registry
+law: >
+  Layers are runtime services behind single API facades. They are never model
+  navigation targets. Every layer call must carry an OperationContext issued by
+  operations_runtime. Contributions are typed and merged by the runtime kernel.
+
+registered_layers:
+  operating_identity:
+    category: identity_surface
+    api: aos_identity/OPERATIONAL_IDENTITY.md
+    contribution_contract: identity_law_contribution
+    direct_model_entry: forbidden_for_normal_flow
+  intent_cognition:
+    category: core_service
+    api: aos_core/intent/main.py
+    contribution_contract: intent_hypothesis_truth_grounding_needs
+    context_required: true
+    direct_model_entry: forbidden_for_normal_flow
+  project_truth:
+    category: runtime_project_truth_service
+    api: operations_runtime/project_truth_reader.py
+    contribution_contract: high_value_project_truth_nodes_and_readiness
+    context_required: true
+    direct_model_entry: forbidden_for_normal_flow
+  truth_runtime:
+    category: capability_service
+    api: aos_capabilities/truth_runtime/main.py
+    contribution_contract: truth_requirement_value_sufficiency
+    context_required: true
+    direct_model_entry: forbidden_for_normal_flow
+  artifact_matrix:
+    category: capability_service
+    api: aos_capabilities/file_intelligence/main.py
+    contribution_contract: artifact_value_targets_promises_duplicates_risk
+    context_required: true
+    direct_model_entry: forbidden_for_normal_flow
+  goal_runtime:
+    category: capability_service
+    api: aos_capabilities/goal_runtime/main.py
+    contribution_contract: goal_ledger_and_experience_memory_when_needed
+    context_required: true
+    direct_model_entry: forbidden_for_normal_flow
+  delivery:
+    category: runtime_service
+    api: operations_runtime/delivery_renderer.py
+    contribution_contract: visible_answer_from_operational_insight
+    direct_model_entry: forbidden_for_normal_flow
+
+contribution_shape:
+  required_fields: [layer, mode, value, evidence, risks, next_needs, ignored_noise]
+
+runtime_graph_owner: operations_runtime.graph_controller
+trace_owner: operations_runtime.trace_store
+matrix_invocation_requirement: >
+  Normal project-facing answers must call multiple independent contribution
+  services through fan-out/fan-in: project_truth, artifact_matrix, goal_runtime
+  lightweight memory, and truth_runtime grounding. A single artifact scan is not
+  sufficient to claim matrix orchestration.

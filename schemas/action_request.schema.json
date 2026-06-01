@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "type",
+    "actor",
+    "target",
+    "inputs",
+    "side_effects",
+    "risk_level"
+  ],
+  "properties": {
+    "type": {
+      "type": "string"
+    },
+    "actor": {
+      "type": "string"
+    },
+    "target": {
+      "type": "string"
+    },
+    "inputs": {
+      "type": "object"
+    },
+    "side_effects": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "risk_level": {
+      "enum": [
+        "read_only",
+        "write_project",
+        "execute_code",
+        "network",
+        "destructive"
+      ]
+    }
+  }
+}

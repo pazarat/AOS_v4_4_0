@@ -1,0 +1,16 @@
+{
+  "principles": [
+    "spec-first",
+    "test-gated",
+    "traceable",
+    "minimal-core",
+    "interface-bound",
+    "safe-execution"
+  ],
+  "done_requires": [
+    "requirements_trace",
+    "policy_pass",
+    "tests_pass_or_explained",
+    "evaluation_recorded"
+  ]
+}

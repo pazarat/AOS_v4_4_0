@@ -1,0 +1,22 @@
+layer:
+  id: operations_runtime
+  type: governance_microkernel
+  entrypoint: operations_runtime/main.py
+  role: Create operation contracts, bind scope, load truth context, orchestrate layer gateways, arbitrate truth, and gate delivery.
+commands:
+  - boot
+  - packet
+  - answer
+  - inspect
+  - doctor
+contracts:
+  requires:
+    - OperationContract
+    - ScopePlan
+    - TruthContext
+    - LayerGatewayProtocol
+    - DeliveryGroundingGate
+forbidden:
+  - direct_layer_to_layer_calls
+  - fixture_specific_runtime_law
+  - unsupported_claim_delivery

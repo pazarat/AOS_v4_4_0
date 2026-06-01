@@ -1,0 +1,59 @@
+project_cognitive_tunnel_gate:
+  project_id: pazarat
+  purpose: "Force Pazarat-specific understanding before using project artifacts."
+
+  rule:
+    before_project_artifact_access: true
+    project_cognition_state_required: true
+    numbered_tunnel_files_define_project_cognition: true
+    artifacts_do_not_override_project_cognitive_tunnel: true
+
+  runtime_contract: _PROJECT_COGNITIVE_TUNNEL_RUNTIME.yaml
+
+  traversal_policy:
+    numeric_order_required_for_deep_or_project_defining_work: true
+    focused_loading_allowed_for_narrow_tasks: true
+    always_include:
+      - 00_PRD_COGNITION_AND_TRACEABILITY_STANDARD.md
+      - 01_PAZARAT_PRD_PLATFORM_IDENTITY_AND_OBJECTIVES.md
+      - 04_PROJECT_STRUCTURE_TREE_INDEX.md
+      - 11_PAZARAT_PRD_DOCUMENTATION_AND_IMPLEMENTATION_TRANSLATION_CONTRACT.md
+      - 12_PAZARAT_PRD_AND_CODE_RUNTIME_GATES.yaml
+      - 13_PAZARAT_360_DEGREE_ENGINEERING_METHOD.md
+      - 99_PAZARAT_PROJECT_REINFORCEMENT_MEMORY.md
+
+  depth_profiles:
+    identity_or_strategy:
+      include:
+        - 01_PAZARAT_PRD_PLATFORM_IDENTITY_AND_OBJECTIVES.md
+        - 02_PLATFORM_STATE_TAXONOMY.md
+        - 03_PLATFORM_EVENT_TAXONOMY.md
+        - 08_PAZARAT_SHARED_PRIMITIVES_AND_CONTINUITY_MEMORY.md
+    documentation_or_prd_work:
+      include:
+        - 00_PRD_COGNITION_AND_TRACEABILITY_STANDARD.md
+        - 07_PAZARAT_HIERARCHICAL_DOCUMENTATION_AND_SHARED_LOGIC_PROTOCOL.md
+        - 09_PAZARAT_NARRATIVE_SEQUENCE_AND_SCENARIO_MATURITY_STANDARD.md
+        - 10_PAZARAT_PARENT_CHILD_SEQUENCE_AND_CROSS_ARTIFACT_ROUTING_STANDARD.md
+        - 11_PAZARAT_PRD_DOCUMENTATION_AND_IMPLEMENTATION_TRANSLATION_CONTRACT.md
+    implementation_translation:
+      include:
+        - 06_IMPLEMENTATION_ARCHITECTURE_AND_CODE_GENERATION_STANDARD.md
+        - 12_PAZARAT_PRD_AND_CODE_RUNTIME_GATES.yaml
+        - 13_PAZARAT_360_DEGREE_ENGINEERING_METHOD.md
+        - 14_PAZARAT_ENGINEERING_ENVIRONMENT_AND_STACK_STANDARD.md
+        - 16_PAZARAT_DATA_MODEL_DATABASE_API_AND_ENDPOINT_STANDARD.md
+        - 17_PAZARAT_CODEBASE_INTEGRATION_AND_DOCUMENTATION_ROUTING_STANDARD.md
+    ui_ux_generation:
+      include:
+        - 05_UI_UX_DESIGN_SYSTEM_AND_VISUAL_GENERATION_STANDARD.md
+        - 09_PAZARAT_NARRATIVE_SEQUENCE_AND_SCENARIO_MATURITY_STANDARD.md
+        - 13_PAZARAT_360_DEGREE_ENGINEERING_METHOD.md
+
+  hard_blocks:
+    - condition: "pazarat_artifact_used_without_project_contract"
+      action: "block_or_load_project_contract"
+    - condition: "pazarat_artifact_used_without_cognitive_tunnel_gate"
+      action: "block_or_load_cognitive_tunnel"
+    - condition: "generic_marketplace_assumption_over_pazarat_truth"
+      action: "reject_and_rebind_to_project_truth"

@@ -1,0 +1,59 @@
+id: truth_runtime
+name: Truth Runtime
+version: 1.0.0
+surface: capability
+role: >
+  Governs truth requirements, truth packets, sufficiency checks, incomplete truth reasoning,
+  response grounding, and execution grounding for AOS.
+owns:
+  - truth.resolve_requirement
+  - truth.build_packet
+  - truth.check_sufficiency
+  - truth.detect_incomplete
+  - truth.validate_response
+  - truth.validate_execution
+  - truth.receipt
+does_not_own:
+  - file scanning
+  - visible surface selection
+  - direct writes
+  - user-facing response synthesis
+  - project-specific truth content
+ports:
+  - aos_core/ports/truth_port.py
+api_contract: TRUTH_RUNTIME_API.yaml
+layer_identity: LAYER_IDENTITY.md
+laws:
+  - truth is value/provenance/relationship/intent/canon aware, not file-size or filename biased
+  - no response or execution from partial truth when the intent requires relational truth
+  - incomplete truth is not ignored and not blindly executed
+  - truth runtime asks artifact cockpit for evidence; artifact cockpit asks truth runtime what evidence is enough
+  - assumptions must remain labeled assumptions
+  - generated indexes are navigation, not source truth
+
+laws_doc: TRUTH_GOVERNANCE_LAWS.md
+
+purpose: >
+  Govern truth depth, truth value semantics, incomplete truth, response grounding, execution grounding, and hot truth packets.
+
+adapter: aos_capabilities/truth_runtime/adapter.py
+
+modules:
+  - truth_requirement
+  - truth_packet
+  - truth_sufficiency
+  - incomplete_truth
+  - truth_value
+  - grounding
+  - identity_sync
+  - receipts
+
+outputs:
+  - truth_requirement
+  - truth_packet
+  - truth_story
+  - truth_value_semantics
+  - sufficiency_decision
+  - response_grounding
+  - execution_grounding
+  - truth_receipt

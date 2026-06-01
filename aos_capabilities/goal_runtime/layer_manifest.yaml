@@ -1,0 +1,16 @@
+layer:
+  id: goal_runtime
+  type: layer_mini_runtime
+  entrypoint: aos_capabilities/goal_runtime/main.py
+  role: Provide goal memory, repeated-failure patterns, and explicit goal opening.
+commands:
+  - goal.experience_patterns
+  - goal.open
+required_gateway_methods:
+  - describe
+  - healthcheck
+  - validate_contract
+  - execute
+permissions:
+  filesystem: scoped_runtime_state
+  network: false

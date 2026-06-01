@@ -1,0 +1,10 @@
+id: sandbox_workspace
+version: '2.2'
+purpose: Keep file mutation behind patch/sandbox workflows; never let the model directly mutate protected surfaces.
+prevents:
+  - direct_project_mutation
+  - direct_self_mutation
+outputs:
+  - sandbox_plan
+  - patch_summary
+  - rollback_hint

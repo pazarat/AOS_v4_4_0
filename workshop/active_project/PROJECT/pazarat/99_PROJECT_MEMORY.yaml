@@ -1,0 +1,17 @@
+project_memory:
+  project_id: pazarat
+  migrated_from: Mind_Ai_v7_10/02_MY_PROJECT/pazarat
+  migration_intent: >
+    Preserve the old Pazarat project truth while placing it under the v8.1 executable tunnel-agent architecture.
+
+  active_rules:
+    - The agent kernel controls execution.
+    - The Pazarat cognitive tunnel controls Pazarat-specific understanding.
+    - Project artifacts are used after the cognitive tunnel, not before it.
+    - State, event, UI, implementation, API, and data model standards must rotate together under the 360 method.
+
+  current_status:
+    project_copied: true
+    cognitive_tunnel_created: true
+    artifacts_preserved: true
+    implementation_target_placeholder_created: true

@@ -1,0 +1,24 @@
+intent_cognition_api:
+  version: 1.0
+  purpose: "Expose Intent Cognition as a single operational awareness interface, not a route table."
+  public_operations:
+    intent.health:
+      output: readiness of the intent cognition runtime
+    intent.resolve:
+      output: captured intent frame
+    intent.build_cognition:
+      input: request_text, intent_frame, active_project_state, truth_requirement
+      output: Intent Cognition Packet
+    intent.validate_spine_flow:
+      input: Intent Cognition Packet
+      output: flow validation result
+    intent.receipt:
+      output: intent cognition decision receipt
+  governing_laws:
+    - initial_intent_is_hypothesis_not_decision
+    - user_diagnosis_is_signal_not_verified_cause
+    - user_metaphor_is_signal_not_literal_architecture
+    - intent_must_be_grounded_by_truth_before_action
+    - intent_creates_operational_cognition_not_tunnels
+    - goal_runtime_is_not_default_for_ordinary_questions
+    - artifact_cockpit_depth_is_controlled_by_truth_need

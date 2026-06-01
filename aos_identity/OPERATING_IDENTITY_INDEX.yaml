@@ -1,0 +1,43 @@
+id: aos_operating_identity_index
+version: '3.0.6'
+purpose: >
+  Bind external models to the AOS operating philosophy before project work,
+  so the model understands the environment, Workshop, active project gateway,
+  Artifact Cockpit, surface rules, and silent 360-degree inspection posture.
+entry_sequence:
+  - aos_identity/START_WORK_OPERATING_MESSAGE.md
+  - aos_identity/SYSTEM_PROMPT_BRIDGE.md
+  - aos_identity/OPERATIONAL_IDENTITY.md
+  - aos_identity/OPERATING_LAYER_MAP.md
+  - aos_identity/SYSTEM_CONSTITUTION.md
+  - aos_identity/TRUTH_GROUNDED_RESPONSE_CONTRACT.md
+  - aos_identity/SILENT_RESPONSE_CONTRACT.md
+  - aos_identity/EXTERNAL_MODEL_BINDING_CONTRACT.md
+  - workshop/_workshop_system/00_WORKSHOP_MANIFEST.md
+stable_surfaces:
+  aos_environment:
+    visible_when: explicit AOS/runtime/governance/self-development/tooling intent
+    hidden_by_default: true
+  workshop_general_truth:
+    visible_when: explicit general standards/workshop/canon/maturity intent
+    hidden_by_default: true
+  active_project_payload:
+    visible_when: default project-facing work
+    evidence_gate: workshop/active_project/PROJECT/
+    empty_means: no_current_project_loaded
+operating_laws:
+  - intent_selects_visible_surface_not_a_narrow_evidence_tunnel
+  - artifact_cockpit_runs_governed_360_inside_allowed_scopes
+  - answer_must_stay_focused_on_user_intent
+  - responses_and_execution_must_be_truth_grounded
+  - unsupported_claims_must_be_marked_unknown_inferred_or_assumption
+  - aos_and_workshop_may_be_silent_lenses_but_not_project_payload
+  - no_project_specific_path_names_in_aos_runtime_truth
+  - current_project_name_is_discovered_from_payload_not_hardcoded
+  - file_work_requires_file_intelligence_port
+  - diagnostics_are_read_only
+  - repairs_require_plan_impact_gate_receipt
+layer_identity_rule:
+  file_name: LAYER_IDENTITY.md
+  purpose: explain each layer's philosophy, boundaries, public API, relationship to AOS, and misuse patterns
+  status: recommended_for_core_layers_and_capabilities

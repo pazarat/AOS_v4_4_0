@@ -1,0 +1,33 @@
+entry_runtime_contract:
+  id: aos_entry_runtime
+  name: Entry / Bootstrap Runtime
+  status: core_gate
+  purpose: >
+    Enforce the first-touch sequence for normal answers and executions so the
+    agent does not enter through file scanning or artifact inspection before it
+    has loaded operating identity, resolved intent, selected the visible surface,
+    and resolved the required truth depth.
+  law:
+    normal_answer_sequence:
+      - operating_identity
+      - intent_frame
+      - surface_resolution
+      - truth_requirement
+      - artifact_cockpit
+      - truth_sufficiency
+      - response_delivery
+    direct_artifact_entry_allowed_only_for:
+      - inspect
+      - doctor
+      - file.diagnose
+      - explicit_file_scan
+      - explicit_artifact_analysis
+    forbidden:
+      - file_intelligence_before_identity_for_normal_answer
+      - file_intelligence_before_intent_for_normal_answer
+      - exposing_bootstrap_or_internal_paths_in_project_surface
+      - using_artifact_scan_as_primary_identity
+  visible_behavior:
+    project_surface: "Answer as an operational project engineer grounded in project truth, without raw internal paths or generic model identity."
+    aos_surface: "Answer about AOS only when the user explicitly targets the environment."
+    workshop_surface: "Answer about general workshop standards only when explicitly targeted."

@@ -1,0 +1,15 @@
+layer:
+  id: intent_cognition
+  type: layer_mini_runtime
+  entrypoint: aos_core/intent/main.py
+  role: Resolve user surface, intent hypothesis, risk, and layer needs.
+commands:
+  - intent.resolve
+required_gateway_methods:
+  - describe
+  - healthcheck
+  - validate_contract
+  - execute
+permissions:
+  filesystem: none
+  network: false

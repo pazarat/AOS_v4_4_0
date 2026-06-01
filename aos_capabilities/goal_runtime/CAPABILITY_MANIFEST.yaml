@@ -1,0 +1,22 @@
+capability: goal_runtime
+version: 1.0
+purpose: >
+  Track high-impact work as goals with target, observations, attempts, tests,
+  truth alignment, and closure criteria so repeated repairs do not become blind patch loops.
+authority: planning_and_trace_only
+core_port: aos_core/ports/goal_runtime_port.py
+api:
+  - goal.health
+  - goal.open
+  - goal.record_observation
+  - goal.record_attempt
+  - goal.check_progress
+  - goal.close
+outputs:
+  - goal_state
+  - goal_receipt
+laws:
+  - goals_must_have_success_criteria
+  - repeated_failure_requires_root_cause_review_not_more_patching
+  - goal_closure_requires_test_or_evidence
+  - goal_runtime_is_capability_not_core_layer

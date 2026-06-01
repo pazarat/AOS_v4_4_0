@@ -1,0 +1,133 @@
+# CAPABILITY MANIFEST, not a core layer.
+# This capability produces evidence, governance hints, and construction gates;
+# final authority stays in AOS core Truth/Goal/Policy/Evaluation.
+id: file_intelligence
+version: '4.0'
+runtime_name: Artifact Governance & Construction Runtime
+purpose: >
+  Provide the AOS agent with a single governed artifact runtime for files,
+  text, code, APIs, schemas, fingerprints, search, diagnostics, construction
+  guidance, write preflight, doctor reports, repair planning, and receipts.
+boundary:
+  active_project_payload: "Default project-facing surface unless AOS intent is explicit."
+  aos_default_surfaces: "Only workshop/active_project/PROJECT is project payload; runtime_state and workshop standards are not project payload."
+  generated_state: "Capability-generated state accelerates navigation only; current files remain source of truth."
+  governance_scope: "The capability can block/warn/mature as evidence; AOS core owns final decision and user-facing response."
+truth_rule: "Indexes orient and retrieve; final high-impact claims require current-file evidence."
+api_surface:
+  - file.health
+  - file.preflight
+  - file.build_context
+  - file.validate_plan
+  - file.diagnose
+  - file.verify_after_write
+  - file.plan_repair
+  - file.doctor
+  - file.receipt
+decisions:
+  - ALLOW: "Standard gates may proceed."
+  - WARN: "Proceed only with explicit warning in receipt."
+  - MATURE: "Truth/canon/owner reference is incomplete; mature or accept risk before production write."
+  - BLOCK: "Stop until blockers are repaired."
+modules:
+  inventory:
+    - inventory/scanner.py
+    - inventory/classifier.py
+  readers:
+    - readers/text_reader.py
+    - readers/markdown_reader.py
+    - readers/yaml_reader.py
+    - readers/json_reader.py
+    - readers/sql_reader.py
+    - readers/code_reader.py
+  fingerprints:
+    - fingerprints/content_fingerprint.py
+    - fingerprints/semantic_fingerprint.py
+  search:
+    - search/keyword_search.py
+    - search/concept_search.py
+    - search/semantic_search.py
+  code_intelligence:
+    - code_intelligence/symbol_extractor.py
+    - code_intelligence/ast_bridge.py
+    - code_intelligence/lsp_bridge.py
+    - code_intelligence/call_graph.py
+    - code_intelligence/import_graph.py
+  database_intelligence:
+    - database_intelligence/schema_reader.py
+    - database_intelligence/migration_reader.py
+    - database_intelligence/orm_mapper.py
+    - database_intelligence/relation_graph.py
+  api_intelligence:
+    - api_intelligence/route_extractor.py
+    - api_intelligence/endpoint_mapper.py
+    - api_intelligence/openapi_mapper.py
+  impact:
+    - impact/impact_scan.py
+    - impact/duplicate_scan.py
+    - impact/conflict_scan.py
+  construction:
+    - construction/construction_context.py
+    - construction/construction_gate.py
+    - construction/generation_guidance.py
+    - construction/ownership_resolver.py
+    - construction/placement_resolver.py
+    - construction/artifact_blueprints.py
+  diagnostics:
+    - diagnostics/issue_model.py
+    - diagnostics/diagnostic_engine.py
+    - diagnostics/text_diagnostics.py
+    - diagnostics/code_diagnostics.py
+    - diagnostics/contract_diagnostics.py
+    - diagnostics/architecture_diagnostics.py
+  governance:
+    - governance/artifact_policy.py
+    - governance/flexible_constitution.py
+    - governance/canon_guard.py
+    - governance/truth_guard.py
+    - governance/write_guard.py
+    - governance/scope_guard.py
+  verification:
+    - verification/verification_engine.py
+  patch_gate:
+    - patch_gate/patch_gate.py
+  receipts:
+    - receipts/receipt_model.py
+    - receipts/evidence_builder.py
+    - receipts/operation_receipt.py
+outputs:
+  - file_matrix_report
+  - construction_runtime
+  - diagnostics
+  - artifact_governance
+  - verification
+  - receipt
+  - evidence_pack
+  - content_knownness_map
+  - symbol_graph
+  - import_graph
+  - call_graph
+  - database_graph
+  - api_map
+  - duplicate_scan
+  - conflict_scan
+  - impact_map
+prevents:
+  - file_name_only_claims
+  - file_size_value_bias
+  - no_single_file_project_decision
+  - direct_write_without_preflight
+  - direct_write_without_impact_scan
+  - direct_write_without_diagnostics
+  - direct_write_without_receipt
+  - stale_index_as_truth
+  - generation_without_owner_context
+  - repair_without_plan_and_gate
+adapter: adapter.py
+adapter_contract:
+  function: run(root, query=None, changed_paths=None, intent=None)
+  output: file_matrix_report
+port: aos_core/ports/file_intelligence_port.py
+cli:
+  inspect: "python aos.py inspect --scope <active_project|workshop|aos> --verbose"
+  doctor: "python aos.py doctor --scope <active_project|workshop|aos> --verbose"

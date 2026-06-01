@@ -1,0 +1,21 @@
+{
+  "version": "2.1.0",
+  "intent_types": [
+    "explain",
+    "inspect",
+    "analyze",
+    "plan",
+    "implement",
+    "repair",
+    "refactor",
+    "evaluate",
+    "document",
+    "create_project",
+    "operate_project",
+    "self_develop_aos",
+    "tool_installation",
+    "architecture_decision"
+  ],
+  "default_surface": "active_project_payload",
+  "aos_surface_requires_explicit_intent": true
+}

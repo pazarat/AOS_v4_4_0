@@ -1,0 +1,13 @@
+layer:
+  id: entry_runtime
+  kind: core_gate
+  purpose: "First-touch bootstrap and entry sequence enforcement."
+  owns:
+    - identity_first
+    - intent_before_artifacts
+    - surface_before_file_cockpit
+    - truth_requirement_before_deep_scan
+  must_not:
+    - behave_like_capability
+    - parse_project_payload_as_first_step
+    - expose_internal_bootstrap_to_project_surface

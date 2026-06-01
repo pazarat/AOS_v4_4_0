@@ -1,0 +1,59 @@
+api: truth_runtime
+version: 1.0.0
+public_methods:
+  truth.health:
+    mode: read_only
+    purpose: Verify truth runtime readiness.
+  truth.resolve_requirement:
+    mode: read_only
+    purpose: Convert intent/surface/risk into required truth depth and required evidence layers.
+  truth.build_packet:
+    mode: read_only
+    purpose: Build a graded truth packet from artifact cockpit evidence and truth store.
+  truth.check_sufficiency:
+    mode: read_only
+    purpose: Decide whether evidence is enough for response or execution.
+  truth.detect_incomplete:
+    mode: read_only
+    purpose: Detect contradictions, weak truth, duplicate functional truths, placeholders, and missing higher-truth alignment.
+  truth.validate_response:
+    mode: read_only
+    purpose: Validate that a response is grounded in verified/derived/assumption/unknown/blocked grades.
+  truth.validate_execution:
+    mode: read_only
+    purpose: Validate that a planned execution has executable truth and no unresolved blockers.
+  truth.receipt:
+    mode: read_only
+    purpose: Emit evidence and decision receipt.
+decisions:
+  - ALLOW
+  - WARN
+  - MATURE
+  - BLOCK
+grades:
+  - verified
+  - derived
+  - assumption
+  - unknown
+  - blocked
+forbidden:
+  - file_size_as_truth_priority
+  - filename_only_claims
+  - single_file_execution_for_relational_intent
+  - blind_execution_of_incomplete_truth
+  - treating_cache_as_source_truth
+  - treating_workshop_standard_as_project_evidence_without_localization
+
+truth_value_semantics:
+  empty_declared_target:
+    meaning: "planned construction target; not completed truth"
+    decision: MATURE
+  declared_but_missing_artifact:
+    meaning: "broken truth promise"
+    decision: MATURE
+  required_new_truth_artifact:
+    meaning: "new owner truth may be required but must be declared before execution"
+    decision: MATURE
+  hot_truth_packet:
+    meaning: "compact truth packet for fast answer path"
+    default: true

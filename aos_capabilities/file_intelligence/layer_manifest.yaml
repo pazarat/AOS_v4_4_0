@@ -1,0 +1,16 @@
+layer:
+  id: artifact_matrix
+  type: layer_mini_runtime
+  entrypoint: aos_capabilities/file_intelligence/main.py
+  role: Read-only artifact scanning, diagnostics, verification, and construction-context extraction within ScopePlan.
+commands:
+  - artifact.inspect
+  - artifact.doctor
+required_gateway_methods:
+  - describe
+  - healthcheck
+  - validate_contract
+  - execute
+permissions:
+  filesystem: scoped_allowed_roots_only
+  network: false

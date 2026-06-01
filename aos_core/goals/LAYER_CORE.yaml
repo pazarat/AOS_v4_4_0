@@ -1,0 +1,12 @@
+id: goal_realization
+version: '2.2'
+purpose: Convert a resolved intent and verified/project truth into a plan that can satisfy the goal without prescribing the solution prematurely.
+prevents:
+  - solution_before_intent
+  - plan_from_assumption
+  - local_fix_as_total_solution
+outputs:
+  - goal_plan
+  - gates
+  - risks
+  - acceptance_criteria_candidates

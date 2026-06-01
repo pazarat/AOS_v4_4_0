@@ -1,0 +1,41 @@
+{
+  "EMPTY_NEW_PROJECT": {
+    "definition": "active_project contains only reserved AOS directories or no payload files.",
+    "strategy": [
+      "Create project contract draft",
+      "Collect questions",
+      "Record assumptions separately",
+      "Select project type",
+      "Do not generate code until minimum truth exists"
+    ]
+  },
+  "SPEC_ONLY_PROJECT": {
+    "definition": "Project contains docs/specs but no executable code.",
+    "strategy": [
+      "Extract requirements",
+      "Build domain model",
+      "Create API/data contracts",
+      "Create implementation plan"
+    ]
+  },
+  "EXISTING_UNDOCUMENTED_PROJECT": {
+    "definition": "Project contains code but weak or missing truth artifacts.",
+    "strategy": [
+      "Scan files",
+      "Build file matrix",
+      "Infer structure as assumptions",
+      "Ask/validate missing intent",
+      "Create recovery documentation"
+    ]
+  },
+  "LEGACY_COMPLEX_PROJECT": {
+    "definition": "Large mixed codebase with many languages, duplicates, or unclear boundaries.",
+    "strategy": [
+      "Inventory first",
+      "Create module map",
+      "Detect risks",
+      "Define stabilization plan",
+      "Patch only through sandbox"
+    ]
+  }
+}

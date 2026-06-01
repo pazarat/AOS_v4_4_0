@@ -1,0 +1,16 @@
+{
+  "tool_risk_levels": [
+    "read_only",
+    "write_project",
+    "execute_code",
+    "network",
+    "destructive"
+  ],
+  "requires_human_approval": [
+    "write_project",
+    "execute_code",
+    "network",
+    "destructive"
+  ],
+  "default_policy": "deny_unknown_side_effects"
+}

@@ -1,0 +1,5 @@
+{
+  "high": "Do not execute. Build discovery or ask targeted questions.",
+  "medium": "Proceed only with read-only discovery and record assumptions.",
+  "low": "Proceed through normal policy-gated lifecycle."
+}

@@ -1,0 +1,19 @@
+public_api:
+  goal.health:
+    description: Check capability readiness.
+  goal.open:
+    description: Open a goal with success criteria and risk posture.
+  goal.record_observation:
+    description: Record evidence, user feedback, or test results.
+  goal.record_attempt:
+    description: Record an attempted fix or design change.
+  goal.check_progress:
+    description: Decide whether the goal is advancing, stuck, or ready for closure.
+  goal.close:
+    description: Close a goal only when success criteria are met by evidence.
+
+decisions:
+  - CONTINUE
+  - REVIEW_ROOT_CAUSE
+  - READY_TO_CLOSE
+  - BLOCKED

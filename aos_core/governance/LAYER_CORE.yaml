@@ -1,0 +1,11 @@
+id: governance_policy
+version: '2.2'
+purpose: Enforce policy decisions for actions, side effects, self-development, file writes, and core changes.
+prevents:
+  - direct_core_mutation
+  - unapproved_high_risk_write
+  - tool_provider_coupling_to_kernel
+outputs:
+  - policy_decision
+  - required_next_step
+  - blockers
